@@ -8,12 +8,13 @@
 </head>
 <body>
     <div id="app">
+        <input type="text" v-model="newTodo" v-on:keyup.enter="add">
         <ul>
-            <input type="text" v-model="newTodo" v-on:keyup.enter="add">
             <li v-if="!todos.length">Belum ada tugas</li>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-                <button v-on:click="removeItem"> X </button>
+            <li v-for="(todo,index) in todos">
+                <span v-bind:class="{'completed': todo.done}">{{ todo.text }}</span>
+                <button v-on:click="removeItem(index)"> X </button>
+                <button v-on:click="toggleC(todo)">Selesai</button>
             </li>
         </ul>
     </div>
