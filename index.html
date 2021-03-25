@@ -5,20 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY TODO - Rahmat Agung Julians</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-    <div id="app">
-        <input type="text" v-model="newTodo" v-on:keyup.enter="add">
-        <ul>
-            <li v-if="!todos.length">Belum ada tugas</li>
-            <li v-for="(todo,index) in todos">
-                <span v-bind:class="{'completed': todo.done}">{{ todo.text }}</span>
-                <button v-on:click="removeItem(index)"> X </button>
-                <button v-on:click="toggleC(todo)">Selesai</button>
-            </li>
-        </ul>
+    <div class="container">
+        <div class="myhead">
+            <h1>TODOS APPLICATION</h1>
+            <h4>made with Love | Rahmat Agung Julians</h4>
+        </div>
+        <div id="app">
+            <input type="text" v-model="newTodo" v-on:keyup.enter="add" placeholder="masukan agenda disini ...">
+            <button v-on:click="add" class="add">Tambahkan</button>
+            <ul>
+                <li v-if="!todos.length" class="white">Belum ada agenda</li>
+                <li v-for="(todo,index) in todos" class="todo">
+                    <div class="todos hidden">
+                        <span v-bind:class="{'completed': todo.done}">{{ todo.text }}</span>
+                        <div class="actions">
+                            <button v-on:click="removeItem(index)" class="remove"> Hapus </button>
+                            <button v-on:click="toggleC(todo)" class="done">Selesai</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-
     <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>

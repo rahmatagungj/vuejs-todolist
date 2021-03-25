@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(243, 175, 73);
+}
+
+.container {
+    margin: 50px;
+}
+.completed {
+    text-decoration: line-through;
+}
+
+.add {
+    border-radius: 5px;
+    border: 0px solid transparent;
+    padding: 10px;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #2EE59D;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.add:hover {
+    color: #fff;
+}
+
+.remove {
+    border-radius: 5px;
+    border: 0px solid transparent;
+    padding: 5px;
+    width: 75px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #d84d3b;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.remove:hover {
+    color: #fff;
+}
+
+.done {
+    border-radius: 5px;
+    border: 0px solid transparent;
+    padding: 3px;
+    width: 75px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #3bced8;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.done:hover {
+    color: #fff;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    border: 0px solid transparent;
+    padding: 10px;
+    width: 85%;
+    height: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.todo {
+    margin-top: 10px;
+}
+
+.actions {
+    padding-top: 5px;
+}
+
+.todos {
+    display: inline-block;
+    background: cadetblue;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 160px;
+    overflow-wrap: break-word;
+    color: white;
+    font-family: system-ui;
+}
+
+li{
+    display: inline-grid;
+    padding: 4px;
+}
+
+
+
+.white {
+    color: white;
+    font-weight: 700;
+    text-shadow: black;
+}
+
+.myhead {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
